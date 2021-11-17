@@ -4,14 +4,15 @@ import React from 'react';
 // Step 2 create a component function that returns an element
 const Home = () => {
     const [username, setUsername] = React.useState('');
-    const [password, setPassword] = React.useState('');
+    const [usernameA, setUsernameA] = React.useState('');
     const[result, setResult] = React.useState(null);
 
-    const handleSignUp = () => {
-       console.log('User has sent money !', username, password);
+    const handleHome = () => {
+       console.log(username, 'has sent money !');
+       console.log(usernameA,'has recieved money !');
        const body = {
          username: username,
-         password: password,
+         usernameA: usernameA,
        };
        // make an http call to java
        const settings = {
@@ -47,13 +48,12 @@ const Home = () => {
             <div>
                 <h3>Reciever</h3>
                 <input 
-                type = "password" 
-                value= {password}
-                onChange = {e => setPassword(e.target.value)}
+                value= {usernameA}
+                onChange = {e => setUsernameA(e.target.value)}
                 />
             </div>
             <div>
-                <button onClick = {handleSignUp}>Send Amount</button>
+                <button onClick = {handleHome}>Send Amount</button>
             </div>
             {(result !==null && result.isSuccess) && <div>{result.message}</div>}
         </div>
@@ -62,4 +62,5 @@ const Home = () => {
 
 // Step 3 
 export default Home; // equivalent to "public" in java
+
 
