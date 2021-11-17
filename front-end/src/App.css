@@ -1,0 +1,26 @@
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0%;
+    background-color: rgb(101, 161, 230);
+    color: white;
+}
+
+li{
+    display: inline-block;
+    margin: 20px;
+}
+
+a{
+    color: white;
+}
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 10px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    width: 11%;
+    opacity: 0.9;
+}
