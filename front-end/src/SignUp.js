@@ -38,12 +38,14 @@ const SignUp = () => {
         <div>
             <h1>Sign Up</h1>
             <div>
+                <h3>Username</h3>
                 <input 
                 value = {username} 
                 onChange = {e => setUsername(e.target.value)}
                 />
             </div>
             <div>
+                <h3>Password</h3>
                 <input 
                 type = "password" 
                 value= {password}

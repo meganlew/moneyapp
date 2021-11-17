@@ -1,18 +1,25 @@
 // Step 1 import react
 import React from 'react';
+import NumberFormat from 'react-number-format';
 
 // Step 2 create a component function that returns an element
 const Home = () => {
     const [username, setUsername] = React.useState('');
     const [usernameA, setUsernameA] = React.useState('');
+    const [amount, setAmount] = React.useState(0);
+    const [text, setText] = React.useState('');
     const[result, setResult] = React.useState(null);
 
     const handleHome = () => {
        console.log(username, 'has sent money !');
        console.log(usernameA,'has recieved money !');
+       console.log(amount, 'amount has been sent !');
+       console.log('message from :', username, text);
        const body = {
          username: username,
          usernameA: usernameA,
+         amount: amount,
+         text: text,
        };
        // make an http call to java
        const settings = {
@@ -53,6 +60,17 @@ const Home = () => {
                 />
             </div>
             <div>
+                <h3>Amount</h3>
+                <input 
+                value= {amount}
+                onChange = {e => setAmount(e.target.value)}
+                />
+            </div>
+            <div>
+                <h3>Notes</h3>
+                <textarea value={text} onChange={e => setText(e.target.value)}></textarea>
+            </div>
+            <div>
                 <button onClick = {handleHome}>Send Amount</button>
             </div>
             {(result !==null && result.isSuccess) && <div>{result.message}</div>}
@@ -62,5 +80,4 @@ const Home = () => {
 
 // Step 3 
 export default Home; // equivalent to "public" in java
-
 
