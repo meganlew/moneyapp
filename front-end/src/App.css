@@ -21,6 +21,7 @@ button {
     margin: 5px 0;
     border: none;
     cursor: pointer;
-    width: 11%;
+    width: auto;
     opacity: 0.9;
+    align-content: center;
 }

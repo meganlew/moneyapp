@@ -35,26 +35,32 @@ const SignUp = () => {
         );
     }
     return(
+        <div class="auth-content">
         <div>
-            <h1>Sign Up</h1>
+            <h1 class="form-title">Sign Up</h1>
             <div>
-                <input 
+                <label >Username: </label>
+                <input  input type="username" required name="username" class="text-input"
                 value = {username} 
                 onChange = {e => setUsername(e.target.value)}
                 />
             </div>
             <div>
-                <input 
-                type = "password" 
+                <label>Password: </label>
+                <input input type="password" required name="password" class="text-input"
+            
                 value= {password}
                 onChange = {e => setPassword(e.target.value)}
                 />
             </div>
+            </div>
+            
             <div>
-                <button onClick = {handleSignUp}>Sign Up</button>
+                <button  type="submit"  class="btn btn-big" onClick = {handleSignUp}>Sign Up</button>
             </div>
             {(result !==null && result.isSuccess) && <div>{result.message}</div>}
         </div>
+        
     );
 };
 

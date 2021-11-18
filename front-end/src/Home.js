@@ -35,25 +35,26 @@ const Home = () => {
         );
     }
     return(
+        <div class="auth-content">
         <div>
-            <h1>Home</h1>
+            <h1 class="form-title">Home</h1>
             <div>
-                <h3>Sender</h3>
-                <input 
+            <label>Sender: </label>
+                <input type="Sender" required name="Sender" class="text-input"
                 value = {username} 
                 onChange = {e => setUsername(e.target.value)}
                 />
             </div>
             <div>
-                <h3>Reciever</h3>
-                <input 
-                type = "password" 
+                <label>Reciever</label>
+                <input type="password" required name="password" class="text-input"
                 value= {password}
                 onChange = {e => setPassword(e.target.value)}
                 />
             </div>
+            </div>
             <div>
-                <button onClick = {handleSignUp}>Send Amount</button>
+                <button  type="submit"  class="btn btn-big" onClick = {handleSignUp}>Send Amount</button>
             </div>
             {(result !==null && result.isSuccess) && <div>{result.message}</div>}
         </div>
