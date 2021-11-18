@@ -6,7 +6,7 @@ import NumberFormat from 'react-number-format';
 const Home = () => {
     const [username, setUsername] = React.useState('');
     const [usernameA, setUsernameA] = React.useState('');
-    const [amount, setAmount] = React.useState(0);
+    const [amount, setAmount] = React.useState('');
     const [text, setText] = React.useState('');
     const[result, setResult] = React.useState(null);
 
@@ -61,9 +61,8 @@ const Home = () => {
             </div>
             <div>
                 <h3>Amount</h3>
-                <input 
-                value= {amount}
-                onChange = {e => setAmount(e.target.value)}
+                <NumberFormat value= {amount} thousandSeparator={true} prefix={'$'}
+                onChange = {e => setAmount(e.target.value)} 
                 />
             </div>
             <div>
