@@ -40,14 +40,14 @@ const Home = () => {
             <h1 class="form-title">Home</h1>
             <div>
             <label>Sender: </label>
-                <input type="Sender" required name="Sender" class="text-input"
+                <input type="text" required name="Sender" class="text-input"
                 value = {username} 
                 onChange = {e => setUsername(e.target.value)}
                 />
             </div>
             <div>
                 <label>Reciever</label>
-                <input type="password" required name="password" class="text-input"
+                <input type="text" required name="reciever" class="text-input"
                 value= {password}
                 onChange = {e => setPassword(e.target.value)}
                 />
