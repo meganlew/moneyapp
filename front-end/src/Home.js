@@ -70,7 +70,7 @@ const Home = () => {
                 <textarea value={text} onChange={e => setText(e.target.value)}></textarea>
             </div>
             <div>
-                <button onClick = {handleHome}>Send Amount</button>
+            <button  type="submit"  class="btn btn-big" onClick = {handleSignUp}>Send Amount</button>
             </div>
             {(result !==null && result.isSuccess) && <div>{result.message}</div>}
         </div>
@@ -79,4 +79,3 @@ const Home = () => {
 
 // Step 3 
 export default Home; // equivalent to "public" in java
-

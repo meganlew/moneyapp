@@ -9,8 +9,10 @@ import Feed from './Feed';
 
 function App() {
   return (
+    
     <div>
-      <ul>
+       <i class="fa fa-bars menu-toggle"></i>
+      <ul class="nav">
         <li><Link to = "/">Home</Link></li>
         <li><Link to = "/sign-up">Sign Up</Link></li>
         <li><Link to = "/Feed">Feed</Link></li>
@@ -23,6 +25,8 @@ function App() {
       </Route>
     </Switch>
     </div>
+    
+  
   );
 }
 
