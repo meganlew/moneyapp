@@ -43,37 +43,43 @@ const Home = () => {
         );
     }
     return(
+        <div class="auth-content">
         <div>
-            <h1>Home</h1>
+            <h1 class="form-title">Home</h1>
             <div>
-                <h3>Sender</h3>
-                <input 
+                <label >Sender: </label>
+                <input  input type="username" required name="username" class="text-input"
                 value = {username} 
                 onChange = {e => setUsername(e.target.value)}
                 />
             </div>
             <div>
-                <h3>Reciever</h3>
-                <input 
+                <label>Reciever: </label>
+                <input input type="username" required name="username" class="text-input"    
                 value= {usernameA}
                 onChange = {e => setUsernameA(e.target.value)}
                 />
             </div>
             <div>
-                <h3>Amount</h3>
-                <NumberFormat value= {amount} thousandSeparator={true} prefix={'$'}
+                <label>Amount: </label>
+                <NumberFormat thousandSeparator={true} prefix={'$'}
+                value= {amount}
                 onChange = {e => setAmount(e.target.value)} 
                 />
             </div>
             <div>
-                <h3>Notes</h3>
-                <textarea value={text} onChange={e => setText(e.target.value)}></textarea>
+                <label>Notes: </label>
+                <textarea input type="text" required name="text" class="text-input"  
+                onChange={e => setText(e.target.value)}></textarea>  
             </div>
+            </div>
+            
             <div>
-            <button  type="submit"  class="btn btn-big" onClick = {handleHome}>Send Amount</button>
+                <button  type="submit"  class="btn btn-big" onClick = {handleHome}>Send Amount</button>
             </div>
             {(result !==null && result.isSuccess) && <div>{result.message}</div>}
         </div>
+        
     );
 };
 
