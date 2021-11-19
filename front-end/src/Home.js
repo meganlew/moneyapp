@@ -70,7 +70,7 @@ const Home = () => {
                 <textarea value={text} onChange={e => setText(e.target.value)}></textarea>
             </div>
             <div>
-            <button  type="submit"  class="btn btn-big" onClick = {handleSignUp}>Send Amount</button>
+            <button  type="submit"  class="btn btn-big" onClick = {handleHome}>Send Amount</button>
             </div>
             {(result !==null && result.isSuccess) && <div>{result.message}</div>}
         </div>
