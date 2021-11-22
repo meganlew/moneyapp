@@ -3,6 +3,7 @@ import React from 'react';
 import NumberFormat from 'react-number-format';
 
 // Step 2 create a component function that returns an element
+// react hook
 const Home = () => {
     const [username, setUsername] = React.useState('');
     const [usernameA, setUsernameA] = React.useState('');
@@ -48,14 +49,14 @@ const Home = () => {
             <h1 class="form-title">Home</h1>
             <div>
                 <label >Sender: </label>
-                <input  input type="username" required name="username" class="text-input"
+                <input  input type="username" required name="username" placeholder="Enter Sender"class="text-input"
                 value = {username} 
                 onChange = {e => setUsername(e.target.value)}
                 />
             </div>
             <div>
                 <label>Reciever: </label>
-                <input input type="username" required name="username" class="text-input"    
+                <input input type="username" required name="username" placeholder="Enter Reciever" class="text-input"    
                 value= {usernameA}
                 onChange = {e => setUsernameA(e.target.value)}
                 />
@@ -69,7 +70,7 @@ const Home = () => {
             </div>
             <div>
                 <label>Notes: </label>
-                <textarea input type="text" required name="text" class="text-input"  
+                <textarea input type="text" required name="text" placeholder="Add message" class="text-input"  
                 onChange={e => setText(e.target.value)}></textarea>  
             </div>
             </div>
