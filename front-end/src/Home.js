@@ -55,8 +55,8 @@ const Home = () => {
                 />
             </div>
             <div>
-                <label>Reciever: </label>
-                <input input type="username" required name="username" placeholder="Enter Reciever" class="text-input"    
+                <label>Receiver: </label>
+                <input input type="username" required name="username" placeholder="Enter Receiver" class="text-input"    
                 value= {usernameA}
                 onChange = {e => setUsernameA(e.target.value)}
                 />
