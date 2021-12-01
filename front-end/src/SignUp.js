@@ -29,7 +29,10 @@ const SignUp = () => {
 
     if(result !==null && result.isSuccess){
         return(
-            <div>
+            <div class ="sign-up">
+                <div>
+                    <h1 class="form-title">Sign Up Success!</h1>
+                </div>
                 Welcome {username}!
             </div>
         );

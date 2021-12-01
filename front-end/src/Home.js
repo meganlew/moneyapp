@@ -38,9 +38,16 @@ const Home = () => {
 
     if(result !==null && result.isSuccess){
         return(
-            <div>
-                Welcome {username}!
+            <div class = "feed">
+                <div>
+                    <h1 class="form-title">Transaction Feed</h1>
+                </div>
+                <div>{username} has sent money!</div>
+                <div>{usernameA} has recieved money!</div>
+                <div>{amount} has been sent!</div>
+                <div> message from {username}, {text}</div>
             </div>
+            
         );
     }
     return(

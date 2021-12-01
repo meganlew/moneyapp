@@ -267,6 +267,23 @@ header .menu-toggle {
   line-height: 1.4em;
 }
 
+/* FEED*/
+.feed {
+  width: 30%;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgb(228, 227, 227);
+  border-radius: 5px;
+}
+/*Sign up*/
+.sign-up{
+  width: 30%;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgb(141, 219, 185);
+  border-radius: 5px;
+}
+
 
 /* AUTH PAGES */
 
