@@ -3,6 +3,7 @@
 - Install vs code https://code.visualstudio.com/download
 
 # Setup project
+- `npm install react-number-format --save` install the react number format for amount
 - `npm i` or `npm install` 
 - Start dev server with `npm start`
 
