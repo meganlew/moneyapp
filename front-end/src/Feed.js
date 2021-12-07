@@ -5,7 +5,7 @@ import React from 'react';
 const Feed = () => {
     return(
         <div>
-            <h1>Feed</h1>
+            <h3>Recent transactoins will appear here.</h3>
         </div>
     );
 };

@@ -38,14 +38,16 @@ const Home = () => {
 
     if(result !==null && result.isSuccess){
         return(
-            <div class = "feed">
+            <div class = "auth-content">
                 <div>
-                    <h1 class="form-title">Transaction Feed</h1>
+                    <h1 class="center">Transaction Feed</h1>
                 </div>
-                <div>{username} has sent money!</div>
-                <div>{usernameA} has recieved money!</div>
-                <div>{amount} has been sent!</div>
-                <div> message from {username}, {text}</div>
+                <div class="left">
+                <h4>Sender: {username}</h4>
+                <h4>Reciever: {usernameA}</h4>
+                <h4>Amount: {amount}</h4>
+                <h4>Message from {username}: "{text}".</h4> 
+                </div>
             </div>
             
         );
@@ -70,7 +72,9 @@ const Home = () => {
             </div>
             <div>
                 <label>Amount: </label>
+                
                 <NumberFormat thousandSeparator={true} prefix={'$'}
+                className="text-input"
                 value= {amount}
                 onChange = {e => setAmount(e.target.value)} 
                 />

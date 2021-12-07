@@ -11,12 +11,17 @@ function App() {
   return (
     
     <div>
+      <header>
+      <div class="logo">
+        <h1 class="logo text"><span>Money</span>App</h1>
+      </div>
        <i class="fa fa-bars menu-toggle"></i>
       <ul class="nav">
         <li><Link to = "/">Home</Link></li>
         <li><Link to = "/sign-up">Sign Up</Link></li>
         <li><Link to = "/Feed">Feed</Link></li>
       </ul>
+      </header>
     <Switch>
      <Route path = "/Feed" component ={Feed} />
       <Route path = "/sign-up" component ={SignUp} />

@@ -26,14 +26,17 @@ const SignUp = () => {
        })
        .catch(console.log); //async try/catch
     };
+    
 
     if(result !==null && result.isSuccess){
         return(
-            <div class ="sign-up">
+            <div class ="auth-content">
                 <div>
                     <h1 class="form-title">Sign Up Success!</h1>
                 </div>
-                Welcome {username}!
+               <div class ="center">
+               <h3> Welcome {username}!</h3>
+               </div>
             </div>
         );
     }
