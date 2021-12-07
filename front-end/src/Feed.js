@@ -5,10 +5,10 @@ import React from 'react';
 const Feed = () => {
     return(
         <div>
-            <h3>Recent transactoins will appear here.</h3>
+            <h3>Recent transactions will appear here.</h3>
         </div>
     );
 };
-
+ 
 // Step 3 
 export default Feed; // equivalent to "public" in java

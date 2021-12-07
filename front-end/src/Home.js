@@ -7,6 +7,7 @@ import NumberFormat from 'react-number-format';
 const Home = () => {
     const [username, setUsername] = React.useState('');
     const [usernameA, setUsernameA] = React.useState('');
+    const [PaymentType, setPaymentType] = React.useState('');
     const [amount, setAmount] = React.useState('');
     const [text, setText] = React.useState('');
     const[result, setResult] = React.useState(null);
@@ -14,11 +15,13 @@ const Home = () => {
     const handleHome = () => {
        console.log(username, 'has sent money !');
        console.log(usernameA,'has recieved money !');
+       console.log('Payment Type :', PaymentType)
        console.log(amount, 'amount has been sent !');
        console.log('message from :', username, text);
        const body = {
          username: username,
          usernameA: usernameA,
+         PaymentType: PaymentType,
          amount: amount,
          text: text,
        };
@@ -45,6 +48,7 @@ const Home = () => {
                 <div class="left">
                 <h4>Sender: {username}</h4>
                 <h4>Reciever: {usernameA}</h4>
+                <h4>Payment Type: {PaymentType}</h4>
                 <h4>Amount: {amount}</h4>
                 <h4>Message from {username}: "{text}".</h4> 
                 </div>
@@ -69,6 +73,16 @@ const Home = () => {
                 value= {usernameA}
                 onChange = {e => setUsernameA(e.target.value)}
                 />
+            </div>
+            <div>
+                <label>Payment Type: </label>
+
+                <select id="PaymentType">
+                    <option disabled selected value> -- select payment type -- </option>
+                    <option value="cash">Cash</option>
+                    <option value="debit">Debit</option>
+                    <option value="credit">Credit</option>
+                </select>
             </div>
             <div>
                 <label>Amount: </label>
