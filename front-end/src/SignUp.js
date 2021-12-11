@@ -75,6 +75,9 @@ const SignUp = () => {
                 onChange = {e => setPassword(e.target.value)}
                 />
             </div>
+            <div>
+                <p>Already have an Account?<a href="/Login">    Login</a></p>
+            </div>
             </div>
             
             <div>

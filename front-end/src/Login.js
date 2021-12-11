@@ -1,5 +1,6 @@
 // Step 1 import react
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Step 2 create a component function that returns an element
 const Login = () => {
@@ -56,10 +57,12 @@ const Login = () => {
                 onChange = {e => setPassword(e.target.value)}
                 />
             </div>
-            </div>
-            
             <div>
-                <button  type="submit"  class="btn btn-big" onClick = {handleLogin}>Login</button>
+                <p>Don't have an Account?<Link to = "/sign-up">    Sign Up</Link></p>
+            </div>
+            </div>
+            <div>
+                <button type="submit"  class="btn btn-big" onClick = {handleLogin}>Login</button>
             </div>
             {(result !==null && result.isSuccess) && <div>{result.message}</div>}
         </div>
