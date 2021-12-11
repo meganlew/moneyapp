@@ -82,7 +82,7 @@ const Home = () => {
                 <select id="PaymentType"
                     value={paymentType}
                     onChange={e => setpaymentType(e.target.value)}>
-                    <option disabled selected value> -- select payment type -- </option>
+                    <option hidden> -- select payment type -- </option>
                     <option value="cash">Cash</option>
                     <option value="debit">Debit</option>
                     <option value="credit">Credit</option>
