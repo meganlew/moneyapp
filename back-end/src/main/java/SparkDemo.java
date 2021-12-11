@@ -6,6 +6,8 @@ import java.util.List;
 import static spark.Spark.*;
 
 class UserDto{
+  public String firstname;
+  public String lastname;
   public String username;
   public String password;
 }
