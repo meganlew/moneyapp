@@ -13,7 +13,9 @@ function App() {
     <div>
       <header>
       <div class="logo">
-        <h1 class="logo text"><span>Money</span>App</h1>
+        <h1 class="logo text">
+          <Link to = "/"><span>Money App</span></Link>
+          </h1>
       </div>
        <i class="fa fa-bars menu-toggle"></i>
       <ul class="nav">
